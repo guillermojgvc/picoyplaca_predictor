@@ -10,6 +10,7 @@ import ec.gvaca.utils.DateTimeComparator;
 
 public class PredictorTest {
 	
+	//Test for Monday at restricted time
 	@Test
 	public void driveRestrictedTime1(){
 		boolean condition = false;
@@ -31,6 +32,7 @@ public class PredictorTest {
 		assertTrue("it could be true",condition);
 	}
 	
+	//Test for Monday at restricted time
 	@Test
 	public void driveRestrictedTime2(){
 		boolean condition = false;
@@ -52,6 +54,7 @@ public class PredictorTest {
 		assertTrue("it could be true",condition);
 	}
 	
+	//Test for Monday at non-restricted time
 	@Test
 	public void driveNonRestrictedTime1(){
 		boolean condition = false;
@@ -73,6 +76,7 @@ public class PredictorTest {
 		assertFalse("it could be false",condition);
 	}
 
+	//Test for Monday at non-restricted time
 	@Test
 	public void driveNonRestrictedTime2(){
 		boolean condition = false;

@@ -19,12 +19,15 @@ public class ExeApp {
 		String time = in.nextLine();
 		System.out.println("Please wait...");
 		in.close();
+		
+		//Initializing DateTimeComparator util and Car object
 		DateTimeComparator dateTimeComparator = new DateTimeComparator();
 		dateTimeComparator.setTime(time);
 		dateTimeComparator.setDate(date);
+		//Initializing Car object
 		Car car = new Car(plate);
 		
-		//Prediction Logic
+		//Prediction Logic (if restricted it returns a true boolean otherwise it is false)
 		if(RestrictionDay.valueOf(dateTimeComparator.dayName()).getRange().contains(car.getLastDigit())){
 			System.out.println(dateTimeComparator.isRestrictedTime() ? "Whops! You can't drive at this moment. Sorry :( ":"You can drive this moment " + dateTimeComparator.dayName() + " at " + dateTimeComparator.getTime());
 		}else{

@@ -4,6 +4,12 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * Enumerator class
+ * 
+ * @author Guillermo Vaca
+ *
+ */
 public enum RestrictionTime {
 
 	Morning("7:00","9:30"),
@@ -12,11 +18,22 @@ public enum RestrictionTime {
 	private String initTime;
 	private String finishTime;
 	
+	/**
+	 * Constructor
+	 * 
+	 * @param initTime
+	 * @param finishTime
+	 */
 	RestrictionTime(String initTime,String finishTime){
 		this.initTime = initTime;
 		this.finishTime = finishTime;
 	}
 	
+	/**
+	 * Returns time in date format for comparison 
+	 * 
+	 * @return a date to compare time
+	 */
 	public Date initToDate(){
 		Date formater = null;
 		try {
@@ -28,6 +45,12 @@ public enum RestrictionTime {
 		}
 	}
 	
+	/**
+	 * 
+	 * Returns time in date format for comparison 
+	 * 
+	 * @return a date to compare time
+	 */
 	public Date finishToDate(){
 		Date formater = null;
 		try {
